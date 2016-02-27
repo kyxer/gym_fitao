@@ -11,4 +11,167 @@
  *  - colors.less
  *
  *-------------------------------------------------------------------------*/
-@import './less/colors.less';
+@import './less/color.less';
+
+*{
+    font-family: 'Oswald', sans-serif;
+}
+
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.border-right{
+    border-right: 1px solid;
+    border-color: @gray-font;
+}
+
+.gym-top-bar{
+    background: @gray-bg;
+    .container {
+        ul{
+            li{
+                a{
+                    color: @gray-font;
+                    font-weight: lighter;
+                    height: 35px;
+                    padding-bottom: 0px;
+                    padding-top: 7px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                a:hover{
+                    color: @white-font;
+                }
+
+            }
+        }
+    }
+
+}
+
+
+.gym-nav-bar{
+    background: @violet-bg;
+    .container{
+        .navbar-header{
+            .navbar-brand{
+
+                padding: 0px;
+                img{
+                    height: 65px;
+                }
+            }
+        }
+    }
+
+
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: @white-font;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: @white-font;
+    background-color: transparent;
+}
+
+.gym-navbar-global{
+    margin-bottom: 0px;
+    border-bottom: 0px
+}
+
+
+
+.gym-menu-bar{
+    margin-left: 50px;
+    margin-top: 5px;
+    li{
+        margin-right: 30px;
+        a{
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 5px;
+            font-weight: lighter;
+            background: transparent;
+        }
+        a:hover{
+            color: @white-font !important;
+            border-bottom: 1px solid;
+            border-color: @white-font;
+        }
+    }
+
+    .select{
+        background-color: transparent;
+        a{
+            border-bottom: 1px solid;
+            border-color: @white-font;
+        }
+
+        a:hover{
+            border-color: @white-font;
+            color: @white-font;
+        }
+    }
+}
+
+.gym-header-session{
+    background: @black-bg;
+    opacity: 0.8;
+    .gym-prof-thum {
+        border: 2px solid;
+        border-color: @yellow-brand;
+        float: left;
+        border-radius: 2px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .gym-prof-link {
+        float: left;
+        margin-top: 20px;
+        margin-left: 40px;
+        color: @white-font;
+
+        div{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 130px;
+            float: left;
+        }
+
+        img{
+            margin-top: 7px;
+            margin-left: 30px;
+        }
+
+    }
+
+     label{
+        margin-top: 20px;
+        margin-left: 30;
+        color: white;
+        font-weight: lighter;
+        letter-spacing: 1px;
+    }
+
+
+}
+
+.gym-corouse{
+    z-index: -1000;
+    position: relative;
+    margin-top: -65px;
+}
+
+
