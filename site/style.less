@@ -12,6 +12,7 @@
  *
  *-------------------------------------------------------------------------*/
 @import './less/color.less';
+@import './less/mixins.less';
 
 *{
     font-family: 'Oswald', sans-serif;
@@ -20,6 +21,13 @@
 .no-padding{
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.no-border{
+    border-left: 0px !important;
+    border-top: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 0px !important;
 }
 
 .border-right{
@@ -66,8 +74,6 @@
             }
         }
     }
-
-
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -85,6 +91,70 @@
     border-bottom: 0px
 }
 
+.gym-button{
+    button{
+        background-color: @yellow-brand;
+        color: @violet-bg;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+    }
+
+    input{
+        padding: 10px 20px;
+        width: 300px;
+        text-align: left;
+    }
+    .gym-btn-arrow{
+        padding-left: 0px;
+        background: @yellow-light-bg;
+        padding-right: 5px;
+        .border-radiuses (5px, 5px, 0px,0px);
+
+        .gym-btn-ins-text{
+            visibility: hidden;
+        }
+
+        .gym-btn-ins-caret{
+            background-image: url('./images/icon-violet-arrow.png');
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: 10px;
+        }
+    }
+
+    .gym-btn-text{
+        .border-radiuses (0px, 0px, 5px,5px);
+    }
+
+    .gym-btn-yellow{
+        background: @yellow-brand;
+    }
+}
+
+.gym-titles{
+    h1{
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom: 1px solid;
+        border-color: @white-font;
+
+    }
+}
+
+.gym-arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f00;
+}
 
 
 .gym-menu-bar{
@@ -98,6 +168,7 @@
             padding-bottom: 5px;
             font-weight: lighter;
             background: transparent;
+            letter-spacing: 1px;
         }
         a:hover{
             color: @white-font !important;
@@ -165,6 +236,44 @@
         letter-spacing: 1px;
     }
 
+    .gym-num-sesion-cnt{
+
+        .gym-num-sesion{
+            background: @white-font;
+            width: 45px;
+            height: 45px;
+            .border-radius(100px);
+            float: left;
+            border: 5px solid;
+            .box-shadow(20px);
+            text-align: center;
+            margin-top: 10px;
+            a{
+                color: @violet-bg;
+                font-weight: bold;
+                line-height: 2.5;
+            }
+        }
+
+        label{
+            font-weight: lighter;
+            letter-spacing: 1px;
+            padding-right: 10px;
+            border-right: 1px solid;
+            border-color: @gray-bg;
+            margin-left: 15px;
+        }
+
+        span{
+            color: @yellow-brand;
+            font-weight: lighter;
+            margin-left: 10px;
+        }
+    }
+
+    .gym-cnt-btn-head{
+        padding-top: 10px;
+    }
 
 }
 
@@ -174,4 +283,377 @@
     margin-top: -65px;
 }
 
+.gym-benefits{
+    .gym-titles{
+        background: @yellow-brand;
+        h1{
+            color: @gray-bg;
+        }
+    }
+
+    .gym-benefits-text{
+        border-right: 1px solid;
+        border-color: @white-font;
+
+        color: @white-font;
+        height: 330px;
+
+        text-align: center;
+        img{
+            margin-top: 20px;
+        }
+
+        .gym-ben-promo{
+            margin-top: 30px;
+            letter-spacing: 1;
+            font-weight: lighter;
+            font-size: 20px;
+            span{
+                color: @yellow-brand;
+            }
+        }
+
+        .gym-ben-exp{
+            font-size: 16px;
+            font-weight: lighter;
+            margin-top: 0px;
+            padding-bottom: 26px;
+
+        }
+    }
+
+    .gym-ben-bg-1{
+        background-image: url('./images/benefits-bg-1.jpg');
+        background-size: cover;
+    }
+    .gym-ben-bg-2{
+        background-image: url('./images/benefits-bg-2.jpg');
+        background-size: cover;
+
+
+    }
+    .gym-ben-bg-3{
+        background-image: url('./images/benefits-bg-3.jpg');
+        background-size: cover;
+
+    }
+    .gym-ben-bg-4{
+        background-image: url('./images/benefits-bg-4.jpg');
+        background-size: cover;
+
+    }
+}
+
+.gym-plans{
+    margin-top: 40px;
+    .gym-titles{
+        background: @gray-bg;
+        h1{
+            color: @yellow-brand;
+        }
+    }
+
+    .gym-plan-cnt{
+        background: @gray-bg;
+        height: 330px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+
+        .gym-plan-title{
+            text-align: center;
+            h2{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-size: 15px;
+            }
+
+        }
+
+        .gym-plans-cost{
+            color: @white-font;
+            margin-top: 30px;
+            margin-left: 0px;
+
+
+            .gym-plan-cost{
+                text-align: center;
+                letter-spacing: 1px;
+                border-right: 1px solid;
+                border-color: @yellow-brand;
+                border-right-style: dotted;
+
+                label{
+                    font-weight: lighter;
+                    font-size: 15px;
+                    display: block;
+
+                    span{
+                        color: @yellow-brand;
+                    }
+                }
+
+                .gym-cost{
+                    font-size: 20px;
+
+                }
+
+                .gym-num-session{
+                    font-size: 13px;
+                    display: inline;
+                }
+
+            }
+
+        }
+
+        .gym-plan-btn{
+            text-align: center;
+            margin-top: 40px;
+        }
+
+    }
+
+    .gym-plan-1{
+
+        .gym-arrow-down{
+            border-top-color: @yellow-brand;
+            position: absolute;
+            left: 45%;
+        }
+        .gym-plan-title{
+            color: @violet-bg;
+            background: @yellow-brand;
+        }
+
+    }
+
+    .gym-plan-2{
+        background-color: @violet-bg;
+
+        .gym-arrow-down{
+            border-top-color: @violet-opac-bg;
+            position: absolute;
+            left: 45%;
+        }
+        .gym-plan-title{
+            color: @white-font;
+            background: @violet-opac-bg;
+        }
+
+    }
+
+    .gym-plan-3{
+
+        .gym-arrow-down{
+            border-top-color: @gray-light-bg;
+            position: absolute;
+            left: 45%;
+        }
+        .gym-plan-title{
+            color: @gray-light-font;
+            background: @gray-light-bg;
+        }
+
+        p{
+            margin-top: 20px;
+            margin-bottom: 89px;
+            text-align: center;
+            color: @white-font;
+            font-size: 12px;
+            letter-spacing: 1;
+        }
+
+    }
+
+    .gym-plan-fot{
+        background: @gray-bg;
+
+        p{
+            color: white;
+            margin-top: 40px;
+            margin-left: 40px;
+            font-size: 12px;
+            font-weight: lighter;
+        }
+
+    }
+
+
+}
+
+.gym-networks{
+    background-image: url('./images/networks-bg.jpg');
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+
+    .gym-networks-link{
+
+        .gym-link-cnt{
+            float: left;
+            margin-left: 50px;
+
+
+            a{
+                color: @yellow-brand;
+
+                img{
+                    margin-left: 15px;
+                    display: block;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+.gym-headquarters{
+
+    margin-top: 30px;
+
+    .gym-titles{
+        background: @gray-bg;
+        color: @white-font;
+    }
+
+    .gym-hq-cnt{
+
+        position:relative;
+        overflow:hidden;
+        padding: 0px;
+        img{
+            width: 100%;
+            overflow:hidden;
+
+        }
+
+
+        .gym-cover{
+            opacity: 0.8;
+            position:absolute;
+            bottom:-110%;
+            left:0;
+            width:100%;
+            height:100%;
+            background: @violet-bg;
+            transition:all 0.7s;
+            -webkit-transition:all 0.7s;
+            -moz-transition: all 0.7s;
+
+            p{
+                text-align: center;
+                font-size: 18px;
+                color: @yellow-brand;
+                letter-spacing: 1px;
+
+            }
+
+            .gym-hedq-text{
+                color: @white-font;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                text-align: center;
+                font-size: 13px;
+            }
+
+
+
+            .gym-icon-sede{
+                margin-top: 20px;
+                text-align: center;
+                img{
+                   width: 50px;
+                   height: 50px;
+                }
+
+            }
+        }
+
+        a:hover .gym-cover{
+            bottom:0;
+        }
+    }
+}
+
+.gym-galery{
+    margin-top: 30px;
+
+    .gym-titles{
+        background: @violet-bg;
+        color: @white-font;
+    }
+
+    .gym-filters{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        span{
+            color: @gray-light-font;
+            background: @gray-font;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        a{
+            color: @gray-light-font;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        a:hover{
+            color: @violet-bg;
+            text-decoration: none;
+        }
+
+        .active{
+            color: @violet-bg;
+        }
+    }
+}
+
+.gym-footer{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    background: @gray-light-fotter;
+
+    .gym-footer-r{
+        margin-top: 50px;
+        padding-left: 80px;
+        border-left: 1px solid;
+        border-left-style: dotted;
+        border-color: @yellow-brand;
+
+        h3{
+            font-size: 15px;
+            color: @white-font;
+            font-weight: lighter;
+        }
+
+        .gym-footer-righs{
+            margin-top: 20px;
+            color: @white-font;
+
+            p{
+                margin-top: 5px;
+                color: @white-font;
+                margin-bottom: 0px;
+                font-weight: lighter;
+            }
+
+            a{
+                color: @white-font;
+                font-weight: lighter;
+                letter-spacing: 1;
+            }
+        }
+    }
+}
 
