@@ -73,7 +73,15 @@
                 }
             }
         }
+
+        .navbar-collapse{
+
+
+
+        }
     }
+
+
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -85,6 +93,12 @@
     color: @white-font;
     background-color: transparent;
 }
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    color: @white-font;
+    background-color: transparent;
+}
+
 
 .gym-navbar-global{
     margin-bottom: 0px;
@@ -159,9 +173,10 @@
 
 .gym-menu-bar{
     margin-left: 50px;
-    margin-top: 5px;
     li{
-        margin-right: 30px;
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-right: 20px;
         a{
             padding-left: 0px;
             padding-right: 0px;
@@ -174,6 +189,54 @@
             color: @white-font !important;
             border-bottom: 1px solid;
             border-color: @white-font;
+        }
+
+        .dropdown-menu{
+            border: 0px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            list-style-position: inside;
+            list-style-type: circle;
+
+
+            li{
+                margin-top: 0px;
+                margin-bottom: 0px;
+                height: 50px;
+                padding-top: 0px;
+                padding-right: 0px;
+                width: 300px;
+                line-height: 4;
+
+
+                a{
+                    padding-top: 10px;
+                    display: inline;
+
+                }
+
+                img{
+                    float: right;
+                }
+
+                a:hover{
+                    background: none;
+                    color: @violet-bg !important;
+                    text-decoration: none !important;
+                    border: 0px solid;
+
+                }
+
+            }
+            li:hover{
+                background: @yellow-brand;
+
+                a{
+                    color: @violet-bg;
+                    text-decoration: none !important;
+                    border: 0px solid;
+                }
+            }
         }
     }
 
@@ -189,23 +252,54 @@
             color: @white-font;
         }
     }
+
+
+    li.open{
+        background: @yellow-brand;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 65px;
+
+        a.dropdown-toggle{
+            background: @yellow-brand;
+            color: @violet-bg !important;
+            .box-shadow(none);
+        }
+
+        a.dropdown-toggle:hover{
+            text-decoration: none !important;
+        }
+    }
+
+}
+
+.losange, .losange div {
+    border: 2px solid;
+    border-color: @yellow-brand;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 37px;
+  height: 37px;
+}
+.losange {
+  transform: rotate(45deg) translateY(10px);
+}
+.losange .los1 {
+  width: 50px;
+  height: 50px;
+  transform: rotate(-45deg) translateY(-30px) translateX(-11px);
+}
+.losange .los1 img {
+  height: auto;
 }
 
 .gym-header-session{
-    background: @black-bg;
+    background: black;
     opacity: 0.8;
-    .gym-prof-thum {
-        border: 2px solid;
-        border-color: @yellow-brand;
-        float: left;
-        border-radius: 2px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        img{
-            width: 40px;
-            height: 40px;
-        }
-    }
 
     .gym-prof-link {
         float: left;
@@ -281,6 +375,47 @@
     z-index: -1000;
     position: relative;
     margin-top: -65px;
+
+    .carousel-control{
+        background: black;
+        height: 90px;
+        width: 50px;
+        margin-top: 230px;
+    }
+
+    .gym-carousel-l{
+        width: 30px;
+        height: 45px;
+        margin-top: 20px;
+        background: url('./images/icon-white-arrow-left.png')
+    }
+    .gym-carousel-r{
+        width: 30px;
+        height: 44px;
+        margin-top: 20px;
+        background: url('./images/icon-white-arrow-right.png')
+    }
+
+    .carousel-indicators{
+        li{
+            transform: rotate(45deg) translateY(10px);
+            .border-radius(0px);
+            border: 1px solid;
+            border-color: @violet-bg;
+            background: white;
+            margin-left: 5px;
+        }
+
+        li.active{
+            background: @violet-bg;
+        }
+
+    }
+
+
+
+
+
 }
 
 .gym-benefits{
@@ -373,9 +508,16 @@
         }
 
         .gym-plans-cost{
-            color: @white-font;
             margin-top: 30px;
             margin-left: 0px;
+
+            a{
+                color: @white-font;
+            }
+
+            a:hover{
+                text-decoration: none;
+            }
 
 
             .gym-plan-cost{
@@ -384,6 +526,8 @@
                 border-right: 1px solid;
                 border-color: @yellow-brand;
                 border-right-style: dotted;
+                padding-bottom: 5px;
+                padding-top: 5px;
 
                 label{
                     font-weight: lighter;
@@ -406,6 +550,27 @@
                 }
 
             }
+
+            .gym-plan-cost:hover{
+                border: 2px solid;
+                border-color: @yellow-brand;
+                background: @gray-light-font;
+            }
+
+            .gym-plan-cost-l{
+                margin-left: -31px;
+                padding-left: 0px;
+                margin-right: 30px;
+            }
+
+            .gym-plan-cost-l:hover{
+                border: 2px solid !important;
+                border-color: @yellow-brand !important;
+                background: @gray-light-font;
+            }
+
+
+
 
         }
 
@@ -640,6 +805,8 @@
         .gym-footer-righs{
             margin-top: 20px;
             color: @white-font;
+            border-top: 1px solid @gray-light-bg;
+            padding-top: 25px;
 
             p{
                 margin-top: 5px;
@@ -657,3 +824,27 @@
     }
 }
 
+
+@media (max-width: 767px){
+
+    .gym-nav-bar{
+        .container{
+            .navbar-header{
+                .navbar-brand{
+
+                    img{
+                        height: 100%;
+                    }
+                }
+            }
+
+            .navbar-collapse{
+
+
+
+            }
+        }
+
+
+    }
+}
