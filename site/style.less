@@ -837,14 +837,307 @@
                     }
                 }
             }
+        }
+    }
 
-            .navbar-collapse{
+    .gym-button{
 
 
+        input{
+            width: 200px;
+            text-align: left;
+        }
+    }
+
+    .gym-titles{
+        h1{
+
+            font-size: 10px;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+    }
+
+    .gym-arrow-down {
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #f00;
+    }
+
+    .gym-menu-bar{
+        margin-left: 0px;
+        li{
+            padding-left: 0px;
+
+            .dropdown-menu{
+
+
+                li{
+
+                    width: 100%;
+                    list-style-type: none;
+
+                    a:hover{
+                        list-style-type: none;
+
+                    }
+
+                }
+            }
+        }
+
+        li.open{
+            margin-left: -15px;
+            padding-left: 15px;
+            height: auto;
+
+
+            a:focus{
+                boder: 0px solid !important;
+            }
+
+            ul{
+                position: absolute !important;
+                background: @white-font !important;
+            }
+
+            .dropdown-menu{
+                width: 100%;
+            }
+        }
+
+    }
+
+    .losange, .losange div {
+        border: 2px solid;
+        border-color: @yellow-brand;
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 2px;
+        margin-left: 2px;
+        transform-origin: 50% 50%;
+        width: 30px;
+        height: 30px;
+    }
+    .losange {
+      transform: rotate(45deg) translateY(10px);
+    }
+    .losange .los1 {
+      width: 40px;
+      height: 40px;
+      transform: rotate(-45deg) translateY(-15px) translateX(2px);
+    }
+
+
+    .gym-header-session{
+
+        .gym-prof-link {
+            float: left;
+            margin-top: 15px;
+            margin-left: 5px;
+            font-size: 12px;
+
+            div{
+                width: 90px;
+            }
+
+            img{
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+
+        }
+
+         label{
+            margin-top: 0px;
+            margin-left: 36px;
+            letter-spacing: 0px;
+            font-size: 12px;
+        }
+
+        .gym-num-sesion-cnt{
+
+            .gym-num-sesion{
+                width: 40px;
+                height: 40px;
+                margin-top: 10px;
+                a{
+                    font-size: 12px;
+                }
+            }
+
+            label{
+
+                padding-right: 0px;
+                border-right: 0px solid;
+                margin-left: 5px;
+                font-size: 9px;
+                margin-top: 15px;
+            }
+
+            span{
+                font-size: 10px;
+            }
+        }
+
+        .gym-cnt-btn-head{
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    .gym-corouse{
+        z-index: 1000;
+        position: relative;
+        margin-top: 0px;
+
+        .carousel-control{
+            background: black;
+            height: 90px;
+            width: 50px;
+            margin-top: 0px;
+        }
+
+    }
+
+    .gym-benefits{
+
+        .gym-benefits-text{
+            border-right: 0px solid;
+            height: 230px;
+            img{
+                margin-top: 10px;
+                width: 50px;
+            }
+
+            .gym-ben-promo{
+                margin-top: 10px;
+                letter-spacing: 1;
+                font-weight: lighter;
+                font-size: 14px;
+            }
+
+            .gym-ben-exp{
+                font-size: 12px;
+                font-weight: lighter;
+                margin-top: 0px;
+                padding-bottom: 15px;
+
+            }
+        }
+    }
+
+    .gym-plans{
+        margin-top: 0px;
+
+        .gym-plan-cnt{
+
+
+
+            .gym-plan-title{
+
+                h2{
+
+                    font-size: 12px;
+                }
 
             }
         }
 
 
+
+        .gym-plan-3{
+
+            p{
+                margin-bottom: 20px;
+            }
+
+        }
+
+        .gym-plan-fot{
+            p{
+
+                margin-top: 20px;
+                margin-left: 20px;
+
+            }
+
+        }
+
+
     }
+
+    .gym-networks{
+
+        padding-bottom: 20px;
+        padding-top: 20px;
+
+        .gym-networks-link{
+
+            .gym-link-cnt{
+                margin-left: 0px;
+
+
+                a{
+                    color: @yellow-brand;
+                    font-size: 11px;
+
+                    img{
+                        margin-left: 15px;
+                        width: 50px;
+                        display: block;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+    .gym-headquarters{
+
+        margin-top: 0px;
+    }
+
+    .gym-galery{
+        margin-top: 0px;
+
+
+        .gym-filters{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 3;
+
+            a{
+
+                margin-right: 12px;
+                margin-left: 14px;
+            }
+        }
+    }
+
+    .gym-footer{
+        margin-top: 0px;
+        padding-bottom: 50px;
+
+        .gym-footer-r{
+            margin-top: 20px;
+            padding-left: 20px;
+
+
+            h3{
+                margin-left: 10px;
+            }
+
+
+        }
+    }
+
 }
